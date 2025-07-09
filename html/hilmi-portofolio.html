@@ -294,74 +294,97 @@
             line-height: 1.6;
         }
 
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
+       /* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
 
-        .about-text {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--text-gray);
-        }
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
 
-        .about-text p {
-            margin-bottom: 25px;
-        }
+.about-text p {
+    margin-bottom: 25px;
+}
 
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
+.about-text p:last-child {
+    margin-bottom: 0;
+}
 
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 40px;
-        }
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
 
-        .stat-item {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border: 1px solid var(--border-gray);
-            transition: all 0.3s ease;
-        }
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--border-gray);
+    transition: all 0.3s ease;
+}
 
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
 
-        .stat-number {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--primary-black);
-            margin-bottom: 10px;
-        }
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: 10px;
+}
 
-        .stat-label {
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--medium-gray);
-        }
+.stat-label {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--medium-gray);
+}
 
 .about-image {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background: url('../image/1706535949763-removebg-preview.png') center center no-repeat;
     background-size: cover;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-image {
+        order: 1;
+    }
+}
+
 
 
         /* Skills Section */
@@ -843,49 +866,50 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section section-alt">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-number">01</div>
-                <h2 class="section-title">About Me</h2>
-                <p class="section-description">
-                    Passionate about creating digital solutions that make a difference
+<section id="about" class="section section-alt">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-number">01</div>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-description">
+                Passionate about creating digital solutions that make a difference
+            </p>
+        </div>
+        <div class="about-content">
+            <div class="about-text reveal">
+                <p>
+                    I'm Hilmi Haziq, an Informatics Engineering student with a passion for mobile development and UI/UX design. Currently pursuing my studies at Politeknik Negeri Jakarta and CCIT Faculty of Engineering, University of Indonesia.
                 </p>
-            </div>
-            <div class="about-content">
-                <div class="about-text reveal">
-                    <p>
-                        I'm Hilmi Haziq, an Informatics Engineering student with a passion for mobile development and UI/UX design. Currently pursuing my studies at Politeknik Negeri Jakarta and CCIT Faculty of Engineering, University of Indonesia.
-                    </p>
-                    <p>
-                        I specialize in Flutter development, Firebase integration, and creating intuitive user interfaces. My approach combines technical expertise with creative problem-solving to deliver exceptional mobile experiences.
-                    </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies, listening to music, reading books, and contributing to open-source projects. I'm always eager to learn and share knowledge with the developer community.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">7+</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2+</div>
-                            <div class="stat-label">Years</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Technologies</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Dedicated</div>
-                        </div>
+                <p>
+                    I specialize in Flutter development, Firebase integration, and creating intuitive user interfaces. My approach combines technical expertise with creative problem-solving to deliver exceptional mobile experiences.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new technologies, listening to music, reading books, and contributing to open-source projects. I'm always eager to learn and share knowledge with the developer community.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedicated</div>
                     </div>
                 </div>
-                <div class="about-image reveal"></div>
             </div>
+            <div class="about-image reveal"></div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 <!-- Education Section -->
 <section id="education" style="padding: 120px 0;">
